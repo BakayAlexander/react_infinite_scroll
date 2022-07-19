@@ -1,5 +1,6 @@
 {
   "name": "react_infinite_scroll",
+  "author": "Alexander Bakay",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
