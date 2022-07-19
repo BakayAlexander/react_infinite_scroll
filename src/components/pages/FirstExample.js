@@ -1,6 +1,6 @@
 import { useState, useRef, useCallback } from 'react';
-import usePosts from './hooks/usePosts';
-import Post from './Post';
+import usePosts from '../../hooks/usePosts';
+import Post from '../Post';
 
 const FristExample = () => {
   const [pageNumber, setPageNumber] = useState(1);
@@ -21,7 +21,7 @@ const FristExample = () => {
       });
       if (post) intObserver.current.observe(post);
     },
-    [isLoading, hasNextPage],
+    [isLoading, hasNextPage]
   );
 
   if (isError) return <p className="center">Error: {error.message}</p>;
@@ -34,11 +34,7 @@ const FristExample = () => {
 
   return (
     <>
-      <h1 id="top">
-        &infin; Infinite Query &amp; Scroll
-        <br />
-        &infin; Ex. 1 - React only
-      </h1>
+      <h2 id="top">&infin; Ex. 1 - React only</h2>
       {content}
       {isLoading && <p className="center">Loading More Posts...</p>}
       <p className="center">

@@ -1,7 +1,7 @@
 import { useRef, useCallback } from 'react';
-import Post from './Post';
+import Post from '../Post';
 import { useInfiniteQuery } from 'react-query';
-import { getPostsPage } from './api/axios';
+import { getPostsPage } from '../../api/axios';
 
 const SecondExample = () => {
   const { fetchNextPage, hasNextPage, isFetchingNextPage, data, status, error } = useInfiniteQuery(
@@ -45,11 +45,7 @@ const SecondExample = () => {
 
   return (
     <>
-      <h1 id="top">
-        &infin; Infinite Query &amp; Scroll
-        <br />
-        &infin; Ex. 2 - React Query
-      </h1>
+      <h2 id="top">&infin; Ex. 2 - React Query</h2>
       {content}
       {isFetchingNextPage && <p className="center">Loading More Posts...</p>}
       <p className="center">
